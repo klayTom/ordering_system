@@ -25,6 +25,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> list() {
+//        通过id排序
+//        ProductExample productExample = new ProductExample();
+//        productExample.setOrderByClause("id desc");
         List<Product> products = productMapper.selectByExample(null);//获得商品列表
         for (Product p:products){
             Category category = categoryService.get(p.getCid());

@@ -53,20 +53,20 @@
 
                         <div class="row">
                             <div class="col-md-6 col-12 mb-20">
-                                <label>姓名</label>
+                                <label>姓名:</label>
                                 <input class="mb-0" type="text" name="name" id="name" placeholder="Name">
                             </div>
                             <div class="col-md-6 col-12 mb-20">
-                                <label>pwd</label>
-                                <input class="mb-0" type="text" name="password" id="password" placeholder="">
+                                <label>密码:</label>
+                                <input class="mb-0" type="password" name="password" id="password" placeholder="Password">
                             </div>
                             <div class="col-md-12 mb-20">
                                 <label>地址:</label>
-                                <input class="mb-0" type="text" name="address" id="address" placeholder="Email Address">
+                                <input class="mb-0" type="text" name="address" id="address" placeholder="Address">
                             </div>
                             <div class="col-md-6 mb-20">
                                 <label>手机:</label>
-                                <input class="mb-0" type="password"  name="phone" id="phone" placeholder="Password">
+                                <input class="mb-0" type="text"  name="phone" id="phone" placeholder="Phone Number">
                             </div>
 
                             <div class="col-12">

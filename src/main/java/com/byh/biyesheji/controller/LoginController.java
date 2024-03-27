@@ -37,8 +37,11 @@ public class LoginController {
             String lastLoginTime = "";
             if(us!=null){
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                //上次时间
+//                上次时间
                 Date time = us.getLasttime();
+                if (null == time) {
+                    time = new Date();
+                }
                 lastLoginTime = sdf.format(time);
                 //新时间
                 String format = sdf.format(new Date());

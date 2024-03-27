@@ -105,12 +105,7 @@
                             </div>
                         </c:if>
                         <!--=======  End of single dropdown  =======-->
-
-
-
                     </div>
-
-
                     <!--=======  End of header top dropdowns  =======-->
                 </div>
             </div>
@@ -122,20 +117,16 @@
     <!--=============================================
     =            navigation menu top            =
     =============================================-->
-
-
     <div class="navigation-menu-top navigation-menu-top-home-4 pt-35 pb-35 pt-md-15 pb-md-15 pt-sm-15 pb-sm-15 mb-md-55 mb-sm-55">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6 col-lg-2 col-md-6 col-sm-6 order-1 order-lg-1">
                     <!--=======  logo  =======-->
-
                     <div class="logo">
                         <a href="/fore/foreIndex">
                             <img src="${pageContext.request.contextPath}/assets/images/logo.png" class="img-fluid" alt="">
                         </a>
                     </div>
-
                     <!--=======  End of logo  =======-->
                 </div>
                 <div class="col-12 col-lg-8 col-md-12 col-sm-12 order-3 order-lg-2">
@@ -153,10 +144,8 @@
                                 <p>所有订单免运费</p>
                             </div>
                         </div>
-
                         <!--=======  End of single feature  =======-->
                         <!--=======  single feature  =======-->
-
                         <div class="single-feature d-flex">
                             <div class="image">
                                 <i class="icon ion-md-checkmark-circle-outline"></i>
@@ -166,10 +155,8 @@
                                 <p>下单5分钟内无条件取消</p>
                             </div>
                         </div>
-
                         <!--=======  End of single feature  =======-->
                         <!--=======  single feature  =======-->
-
                         <div class="single-feature d-flex mb-sm-0">
                             <div class="image">
                                 <i class="icon ion-md-notifications-outline"></i>
@@ -179,45 +166,45 @@
                                 <p>每个订单超过$ 120.00</p>
                             </div>
                         </div>
-
                         <!--=======  End of single feature  =======-->
-
-
                     </div>
-
                     <!--=======  End of header feature container  =======-->
-
-
                 </div>
-                <div class=" col-6 col-lg-2 col-md-6 col-sm-6 order-2 order-lg-3">
-                    <!--=======  cart icon  =======-->
 
-                    <div class="minicart-section minicart-section-home-4">
-                        <a href="/fore/forecart" id="cart-icon">
-                            <span class="image"><i class="icon ion-md-cart"></i></span>
-                            <h5>我的购物车<i class="fa fa-angle-down"></i></h5>
-                            <p>点击查看</p>
-                        </a>
-                    </div>
-
-                    <!--=======  End of cart icon  =======-->
-                </div>
             </div>
         </div>
     </div>
 
     <!--=======  End of navigation menu top  =======-->
     <!--=============================================
-=            navigation menu         =
-=============================================-->
+		=            navigation menu         =
+		=============================================-->
 
-    <div class="navigation-menu navigation-menu-home-4">
+    <div class="navigation-menu">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-7">
-                    <!--=======  sticky logo  =======-->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg-3 col-md-12 col-sm-12">
+                    <!--=======  category menu  =======-->
 
-                    <div class="sticky-logo">
+                    <div class="hero-side-category">
+                        <!-- Category Toggle Wrap -->
+                        <div class="category-toggle-wrap">
+                            <!-- Category Toggle -->
+                            <button class="category-toggle" id="categorys"> <i class="fa fa-bars"></i> 商品分类 </button>
+                        </div>
+
+                        <!-- Category Menu -->
+                        <nav class="category-menu">
+                            <ul>
+                                <c:forEach items="${categories}" var="category">
+                                    <li><a href="foreFindCategory?id=${category.id}" >${category.name}</a></li>
+                                </c:forEach>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--=======  End of category menu =======-->
+                    <!--=======  sticky logo  =======-->
+                    <div class="sticky-logo" style="margin-top: -33px">
                         <a href="/fore/foreIndex">
                             <img src="${pageContext.request.contextPath}/assets/images/logo.png" class="img-fluid" alt="">
                         </a>
@@ -227,24 +214,20 @@
 
                     <!--=======  search icon for tablet  =======-->
 
-                    <div class="search-icon-menutop-tablet search-icon-menutop-tablet-home-4 text-right d-inline-block d-lg-none">
+                    <div class="search-icon-menutop-tablet text-right d-inline-block d-lg-none">
                         <a href="#" id="search-overlay-active-button">
                             <i class="icon ion-md-search"></i>
                         </a>
                     </div>
 
                     <!--=======  End of search icon for tablet  =======-->
+                </div>
+                <div class="col-12 col-lg-6">
                     <!-- navigation section -->
                     <div class="main-menu">
                         <nav>
                             <ul>
-                                <li class="active menu-item-has-children"><a href="#">美食分类</a>
-                                    <ul class="sub-menu">
-                                        <c:forEach items="${categories}" var="category">
-                                            <li><a href="foreFindCategory?id=${category.id}" class="fruit">${category.name}</a></li>
-                                        </c:forEach>
-                                    </ul>
-                                </li>
+                                <li><a href="/fore/forecart">我的购物车</a></li>
                                 <li><a href="/fore/forebought">我的订单</a></li>
                                 <li><a href="/fore/foreZixuns">校园资讯</a></li>
                                 <li><a href="/fore/faq">常问问题</a></li>
@@ -258,7 +241,7 @@
 
                     <div class="navigation-search d-none d-lg-block">
                         <form method="post" action="/fore/foreNameLike">
-                            <input type="search" placeholder="Search product ..." name="pName">
+                            <input type="search" placeholder="Search product ..." name="pName" id="">
                             <button type="submit"><i class="icon ion-md-search"></i></button>
                         </form>
                     </div>
@@ -274,7 +257,5 @@
     </div>
 
     <!--=====  End of navigation menu  ======-->
-
 </div>
 
-<!--=====  End of header container  ======-->

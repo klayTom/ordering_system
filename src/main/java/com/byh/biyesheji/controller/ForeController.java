@@ -479,6 +479,8 @@ public class ForeController {
             }
             model.addAttribute("products",ps1);
             model.addAttribute("category",category);
+            model.addAttribute("proSize",ps.size());
+
             return "forepage/proCategorySeach";
         }
         model.addAttribute("products",ps);
